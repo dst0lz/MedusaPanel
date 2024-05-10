@@ -1,0 +1,8 @@
+<app-box-statistics
+  inputHeading="Abgeschlossene Poseidon-Reports"
+  inputHeadingAllTime="Gesamt abgeschlossene Poseidon-Reports"
+  (alltimeChange)="changeAllTime($event)"
+>
+  <fa-icon [icon]="['fas', 'comments']"></fa-icon>
+  <p class="fw-bold mt-3">{{ reports }}</p>
+</app-box-statistics>

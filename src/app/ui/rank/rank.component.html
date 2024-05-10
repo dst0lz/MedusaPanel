@@ -1,0 +1,17 @@
+<div class="d-flex m-auto" (click)="callParent(name)" style="cursor: pointer">
+  <div class="image-container">
+    <img
+      class="align-self-center"
+      src="https://mc-heads.net/avatar/{{ name }}/55.png"
+      width="55px"
+      height="55px"
+    />
+  </div>
+  <div class="mx-4 text-align-center">
+    <p class="text-center mb-0">{{ name }}</p>
+    <div class="rank-icon mt-1" [ngStyle]="{ 'background-color': color }">
+      {{ role }}
+    </div>
+    <p class="mt-3" *ngIf="isTeamlist"></p>
+  </div>
+</div>

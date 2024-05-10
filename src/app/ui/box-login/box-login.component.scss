@@ -1,0 +1,16 @@
+.login-bt {
+  border-radius: 50px;
+}
+
+.text-field {
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.14);
+  padding: 1%;
+  border: none;
+  color: white;
+}
+
+.text-field:focus-visible {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}

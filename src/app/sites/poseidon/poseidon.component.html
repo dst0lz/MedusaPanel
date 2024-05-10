@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+
+<!---NOT FOUND DIALOG-->
+<div class="not-found" *ngIf="!messageFound">
+  <p>Diese Message wurde nicht gefunden</p>
+  <mat-icon>sentiment_dissatisfied</mat-icon>
+</div>
+
+<div *ngIf="messageFound && this.message !== undefined">
+  <div class="row m-0 pt-5">
+    <div class="col-2"></div>
+
+    <div class="col-5">
+      <app-box-message-overview
+        [server]="this.message.server"
+        [message]="this.message.message"
+      ></app-box-message-overview>
+      <div class="mt-3">
+        <app-box-message-reason
+          (finishMessage)="finishMessage($event)"
+          [readyButtonDisabled]="readyButtonDisabled"
+        ></app-box-message-reason>
+      </div>
+
+      <div class="row">
+        <app-box-intern-report
+          class="col-lg-6 flex-md-wrap pt-md-3"
+        ></app-box-intern-report>
+        <app-box-report-guidelines
+          class="col-lg-6 flex-md-wrap pt-md-3"
+          [name]="'Poseidon Richtlinien'"
+          [link]="
+            'https://tcp-intern.thelair.eu/medusa/guidelines/reports/overview'
+          "
+        >
+        </app-box-report-guidelines>
+      </div>
+    </div>
+
+    <div class="pl-6 col-4">
+      <app-box-report-info
+        [reportedName]="this.message.senderName"
+        [uuid]="this.message.senderUUID"
+        [registeredAt]="this.message.messageTime"
+        [reporter]="'Poseidon'"
+        [currentEditor]="
+          this.message.assignedUser === ''
+            ? 'Nicht zugewiesen'
+            : this.message.assignedUser
+        "
+        [status]="this.message.reportState"
+        [role]="this.message.rank"
+      ></app-box-report-info>
+    </div>
+
+    <div class="col-1"></div>
+  </div>
+</div>

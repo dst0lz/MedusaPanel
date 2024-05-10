@@ -1,0 +1,35 @@
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: gray;
+  opacity: 0.3;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: white;
+  opacity: 1;
+}
+
+.checkbox-round-label {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.ready-bt {
+  height: 35px;
+  border-radius: 50px;
+  background-color: #00aa00;
+  width: 200px;
+}
+
+.ready-bt:hover {
+  background-color: #008a00;
+}

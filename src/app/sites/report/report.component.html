@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<!---NOT FOUND DIALOG-->
+<div class="not-found" *ngIf="!reportFound">
+  <p>Dieser Report wurde nicht gefunden</p>
+  <mat-icon>sentiment_dissatisfied</mat-icon>
+</div>
+
+<div class="not-found" style="font-size: xx-large" *ngIf="love">
+  <p>Möchtest du mein Valentinsdate sein?</p>
+  <mat-icon>favorite</mat-icon>
+</div>
+
+<div *ngIf="reportFound && !love && this.report !== undefined">
+  <div class="row m-0 pt-5">
+    <div class="col-2"></div>
+
+    <div class="col-5">
+      <app-box-report-overview
+        [reason]="this.report.reason"
+        [server]="this.report.server"
+        [replay]="
+          this.report.replay === '' ? 'Nicht vorhanden' : this.report.replay
+        "
+        [status]="this.report.onlineState"
+      ></app-box-report-overview>
+      <div class="mt-3">
+        <app-box-report-reason
+          (finishReport)="finishReport($event)"
+          [readyButtonDisabled]="readyButtonDisabled"
+        ></app-box-report-reason>
+      </div>
+
+      <div class="row">
+        <app-box-intern-report
+          class="col-lg-6 flex-md-wrap pt-md-3"
+        ></app-box-intern-report>
+        <app-box-report-guidelines
+          class="col-lg-6 flex-md-wrap pt-md-3"
+          [name]="'Report Richtlinien'"
+          [link]="
+            'https://tcp-intern.thelair.eu/medusa/guidelines/reports/overview'
+          "
+        >
+        </app-box-report-guidelines>
+      </div>
+    </div>
+
+    <div class="pl-6 col-4">
+      <app-box-report-info
+        [reportedName]="this.report.reportedName"
+        [uuid]="this.report.reportedUUID"
+        [registeredAt]="this.report.reportTime"
+        [reporter]="this.report.reportName"
+        [currentEditor]="
+          this.report.assignedUser === ''
+            ? 'Nicht zugewiesen'
+            : this.report.assignedUser
+        "
+        [status]="this.report.reportState"
+        [role]="this.report.rank"
+      ></app-box-report-info>
+    </div>
+
+    <div class="col-1"></div>
+  </div>
+</div>

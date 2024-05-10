@@ -1,0 +1,47 @@
+.headline {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.headline-font {
+  font-size: calc(100% - 10px);
+}
+
+p {
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+.rank-icon {
+  border-radius: 15px;
+  padding: 3px;
+  text-align: center;
+  font-size: calc(100% - 2px);
+  width: 150px;
+}
+
+.status-badge {
+  border-radius: 15px;
+  padding: 1px;
+  text-align: center;
+  font-size: calc(100% - 2px);
+  width: 100px;
+  background-color: rgb(100, 100, 100);
+}
+
+.separation {
+  border: 1px solid white;
+  opacity: 0.1;
+  margin-top: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.copy:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}

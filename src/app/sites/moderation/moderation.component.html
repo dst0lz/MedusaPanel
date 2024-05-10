@@ -1,0 +1,26 @@
+<main>
+  <app-navbar></app-navbar>
+  <div class="row m-0 pt-5">
+    <div class="col-1"></div>
+
+    <div class="col-12 col-lg-6">
+      <app-box-report></app-box-report>
+
+      <div class="row pt-5">
+        <app-box-intern-report
+          class="col-lg-6 flex-md-wrap pt-md-3"
+        ></app-box-intern-report>
+        <app-box-poseidon class="col-lg-6 flex-md-wrap pt-md-3">
+        </app-box-poseidon>
+      </div>
+    </div>
+
+    <div class="col-1"></div>
+
+    <div class="pl-6 col-3 d-none d-lg-block">
+      <app-box-teamlist (getUsername)="sendName($event)"></app-box-teamlist>
+    </div>
+
+    <div class="col-1"></div>
+  </div>
+</main>

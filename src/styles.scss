@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+  font-family: Tahoma;
+  src: url("./assets/fonts/Tahoma.ttf");
+}
+
+body {
+  background-image: url("./assets/img/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color: white;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}

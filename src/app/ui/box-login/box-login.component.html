@@ -1,0 +1,30 @@
+<div>
+  <app-box width="700px" height="auto">
+    <div class="d-flex flex-column align-items-left p-5">
+      <label class="ps-2 mb-1" for="username">Benutzername</label>
+      <input
+        type="text"
+        class="text-field"
+        id="username"
+        (keyup.enter)="callParent(username.value, password.value)"
+        required
+        #username
+      />
+      <label class="ps-2 mt-2 mb-1" for="password">Passwort</label>
+      <input
+        type="password"
+        class="text-field"
+        id="password"
+        (keyup.enter)="callParent(username.value, password.value)"
+        required
+        #password
+      />
+      <button
+        class="login-bt btn btn-danger mt-4"
+        (click)="callParent(username.value, password.value)"
+      >
+        Login
+      </button>
+    </div>
+  </app-box>
+</div>

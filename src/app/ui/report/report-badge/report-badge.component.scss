@@ -1,0 +1,26 @@
+.own-badge {
+  input[type="radio"] {
+    opacity: 0;
+    margin-left: -10px;
+  }
+
+  input[type="radio"]:checked + label {
+    background: rgb(170, 170, 170);
+  }
+
+  label {
+    margin-top: 3px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  input[type="radio"] + label {
+    border: 1px solid rgb(100, 100, 100);
+    background-color: rgb(100, 100, 100);
+    padding: 3px;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+  }
+  padding: 2px;
+}

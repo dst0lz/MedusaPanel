@@ -1,0 +1,15 @@
+<app-box width="100%" height="240px">
+  <div class="d-flex flex-column align-items-center fs-5 p-3 text-center">
+    <div class="d-flex row">
+      <div class="col-1"></div>
+      <div class="d-inline-flex col-10">
+        <p>{{ heading }}</p>
+        <mat-icon (click)="switchAllTimeStatistics()" class="mt-2 switch"
+          >swap_horiz</mat-icon
+        >
+      </div>
+      <div class="col-1"></div>
+    </div>
+    <ng-content></ng-content>
+  </div>
+</app-box>

@@ -1,0 +1,18 @@
+<app-box width="100%" height="240px">
+  <div class="d-flex flex-column align-items-center fs-5">
+    <img
+      class="py-3"
+      src="./assets/img/guidelines.png"
+      width="30%"
+      height="30%"
+    />
+    <p class="fw-normal pb-2">Poseidon-Reports</p>
+    <button
+      class="open-poseidon-bt btn btn-success fw-bold"
+      (click)="openMessage()"
+    >
+      Öffnen
+    </button>
+    <p class="pt-2 fs-6 fw-normal">Offene Reports: {{ messages }}</p>
+  </div>
+</app-box>

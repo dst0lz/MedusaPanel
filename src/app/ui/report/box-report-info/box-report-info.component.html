@@ -1,0 +1,56 @@
+<app-box width="370px" height="100%">
+  <div class="ps-3">
+    <div class="headline healine-font pt-3">
+      <h1>❯ Spieler gemeldet</h1>
+    </div>
+    <div class="ps-2">
+      <div class="d-flex fs-5 fw-bold align-items-center">
+        <img
+          class="align-self-center"
+          src="https://mc-heads.net/avatar/{{ reportedName }}/80.png"
+          width="80px"
+          height="80px"
+        />
+
+        <div class="rank-icon ms-3" [ngStyle]="{ 'background-color': color }">
+          {{ role }}
+        </div>
+      </div>
+
+      <div class="d-inline-flex healine-font mt-3">
+        <h1 class="mb-0">❯ {{ reportedName }}</h1>
+        <mat-icon (click)="copyName()" class="fs-5 align-self-end ms-1 copy"
+          >content_copy</mat-icon
+        >
+      </div>
+
+      <div class="d-inline-flex">
+        <h5>{{ uuid }}</h5>
+        <mat-icon (click)="copyUUID()" class="fs-6 ms-1 copy"
+          >content_copy</mat-icon
+        >
+      </div>
+    </div>
+  </div>
+  <div class="separation"></div>
+  <div class="ps-3">
+    <div class="headline healine-font pt-3 mt-2 mb-5">
+      <h1>❯ Reportlog</h1>
+    </div>
+    <p>Report registriert am:</p>
+    <p class="fw-bold mb-5">{{ registeredAt }}</p>
+
+    <p>Report erstellt von:</p>
+    <p class="fw-bold mb-5">{{ reporter }}</p>
+
+    <p>Zugewiesen an:</p>
+    <p class="fw-bold mb-5">{{ currentEditor }}</p>
+
+    <div class="d-flex">
+      <p>Status:</p>
+      <div class="ms-2 status-badge align-self-end">
+        {{ status }}
+      </div>
+    </div>
+  </div>
+</app-box>

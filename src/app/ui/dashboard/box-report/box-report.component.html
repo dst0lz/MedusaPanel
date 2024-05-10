@@ -1,0 +1,13 @@
+<app-box width="100%" height="390px">
+  <div class="d-flex flex-column align-items-center p-5 fs-5 fw-bold">
+    <img src="./assets/img/sword.png" width="150px" height="150px" />
+    <p class="open-reports pb-4 pt-3">Zuweisung neuer Report</p>
+    <button
+      class="open-report-bt btn btn-danger fs-5 fw-bold"
+      (click)="openReport()"
+    >
+      Starte deine Tour
+    </button>
+    <p class="pt-2 fs-6 fw-normal">Offene Reports: {{ reports }}</p>
+  </div>
+</app-box>

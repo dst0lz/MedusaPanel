@@ -1,0 +1,18 @@
+<app-box width="100%" height="100%">
+  <h1 class="active-team-font">Derzeit aktive Teamler</h1>
+  <div class="active-team-box mb-3"></div>
+  <div class="d-flex justify-content-center">
+    <ul class="teamlist">
+      <li class="m-0 fs-5 fw-bold" *ngFor="let entry of teamlist">
+        <app-ui-rank
+          name="{{ entry.name }}"
+          role="{{ entry.role.realName }}"
+          color="{{ entry.role.color }}"
+          [isTeamlist]="true"
+          class="justify-content-center"
+          (clickUser)="callParent($event)"
+        ></app-ui-rank>
+      </li>
+    </ul>
+  </div>
+</app-box>

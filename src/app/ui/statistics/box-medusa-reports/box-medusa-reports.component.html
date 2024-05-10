@@ -1,0 +1,8 @@
+<app-box-statistics
+  inputHeading="Abgeschlossene Reports"
+  inputHeadingAllTime="Gesamt abgeschlossene Reports"
+  (alltimeChange)="changeAllTime($event)"
+>
+  <fa-icon [icon]="['fas', 'calendar-check']"></fa-icon>
+  <p class="fw-bold mt-3">{{ reports }}</p>
+</app-box-statistics>

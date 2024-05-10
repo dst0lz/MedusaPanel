@@ -1,0 +1,89 @@
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.link {
+  align-self: center;
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.custom-select {
+  position: absolute;
+  width: 240px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: #1a2629;
+  opacity: 70%;
+  border-radius: 25px;
+  z-index: 9;
+  right: 35px;
+  top: 90px;
+  animation: open 0.3s linear forwards;
+  cursor: pointer;
+  display: block;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+  70% {
+    height: 300px;
+  }
+  100% {
+    opacity: 70%;
+  }
+}
+
+.custom-select-disabled {
+  position: absolute;
+  width: 240px;
+  border: 1px solid black;
+  background-color: #1a2629;
+  opacity: 70%;
+  border-radius: 25px;
+  z-index: 9;
+  right: 35px;
+  top: 90px;
+  animation: close 0.3s ease-out forwards;
+  cursor: default;
+}
+
+.custom-select-disabled > div {
+  display: none;
+}
+
+@keyframes close {
+  0% {
+    display: block;
+    height: 300px;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+    display: none;
+  }
+}
+
+fa-icon {
+  font-size: calc(100% - 3px);
+  margin-right: 3px;
+}
+
+.menu-entry {
+  text-align: center;
+  padding: 23px;
+  border-top: 1px solid black;
+}
+
+.menu-entry:hover {
+  background-color: #2e3a3d;
+}

@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="fs-5 fw-bold d-flex justify-content-center">
+  <h1>Statistiken von {{ username }}</h1>
+</div>
+
+<div class="row mt-5">
+  <div class="col-4"></div>
+  <app-box-medusa-reports
+    [allTime]="this.numberReports"
+    [week]="this.numberWeekReports"
+    class="col-2"
+  ></app-box-medusa-reports>
+  <app-box-poseidon-reports
+    [allTime]="this.numberPoseidon"
+    [week]="this.numberWeekPoseidon"
+    class="col-2"
+  ></app-box-poseidon-reports>
+  <div class="col-4"></div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-4"></div>
+  <app-box-teamspeak
+    [time]="numberTeamspeak.toString()"
+    class="col-2"
+  ></app-box-teamspeak>
+  <app-box-worktime class="col-2"></app-box-worktime>
+  <div class="col-4"></div>
+</div>
